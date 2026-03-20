@@ -10,6 +10,8 @@ def show_state(name_hero, hp_hero, name_enemy, hp_enemy):
             name_enemy: hp_enemy
     }
 
+    print() ############# falta
+
     return hp
 
 def turn_player():
@@ -32,8 +34,26 @@ def turn_player():
         
         else:
             print("The special ability failed")
+    
+    else:
+        print("Invalid option")
 
 def turn_enemy():
     attack = random.randint(15, 20)
     return attack
 
+def verify_winner(hp_hero, hp_enemy):
+    verify = True ########################### en duda
+
+    if hp_hero == 0:
+        print("You win!")
+        verify = False
+
+    elif hp_enemy == 0:
+        print("You lose.")
+        verify = False
+    
+    else:
+        verify = True
+
+    return verify

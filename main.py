@@ -13,3 +13,5 @@ print(functions.show_state(name_hero, hp_hero, name_enemy, hp_enemy))
 functions.turn_player()
 
 print("Damage caused by enemy: ",functions.turn_enemy())
+
+print(functions.verify_winner(20, 0))
