@@ -26,8 +26,6 @@ Module:
 -Open your terminal.
 -Run: python main.py
 
-
-
 6.Challenger Dev.
 
   As a Dev, we have to confront many blockers, our team lost and chance new members, in order to this we consider a challenger :
@@ -38,12 +36,14 @@ Module:
 
 7.Test cases
 
-  -TC-01----> Critical Hit---->	Attack the Enemy.	Damage is doubled (2x). A message says "CRITICAL HIT!.
-  -TC-02----> Healing	Use a Potion ----->Hero life increases by 20. Potions decrease by 1.
-  -TC-03----> No Potions ----->	Use a Potion when potions = 0.	A message says "No stock". The player must choose another action.
-  -TC-04---->Special Fail	Use Special Ability ---->If the random chance is < 50%, 0 damage is caused.	S
-  -TC-05----> Hero Victory--Enemy HP reaches ----> 	The loop stops. A message says "You win!".	
-  -TC-06----> Game Ove----Hero HP reaches 0.	 ---->The loop stops. A message says "You lose!".
+  you can provee some options
+  
+    -TC-01----> Critical Hit---->	Attack the Enemy.	Damage is doubled (2x). A message says "CRITICAL HIT!.
+    -TC-02----> Healing	Use a Potion ----->Hero life increases by 20. Potions decrease by 1.
+    -TC-03----> No Potions ----->	Use a Potion when potions = 0.	A message says "No stock". The player must choose another action.
+    -TC-04---->Special Fail	Use Special Ability ---->If the random chance is < 50%, 0 damage is caused.	S
+    -TC-05----> Hero Victory--Enemy HP reaches ----> 	The loop stops. A message says "You win!".	
+    -TC-06----> Game Ove----Hero HP reaches 0.	 ---->The loop stops. A message says "You lose!".
 
  
 8. Porpuse
