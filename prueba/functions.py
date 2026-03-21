@@ -28,7 +28,7 @@ def turn_player(hp_hero: int, hp_enemy: int, potions: int):
         input()
         
         hp_enemy -= damage
-        attack_enemy = turn_enemy()
+        attack_enemy = turn_enemy(hp_hero, hp_enemy)
         hp_hero -= attack_enemy
         print(f"The enemy has attacked: {attack_enemy}")
         input()
@@ -40,7 +40,7 @@ def turn_player(hp_hero: int, hp_enemy: int, potions: int):
             print("You have healed: +20 life")
             print(f"stock's potions {potions}")
 
-            attack_enemy = turn_enemy()
+            attack_enemy = turn_enemy(hp_hero, hp_enemy)
             hp_hero -= attack_enemy
             print(f"The enemy has attacked: {attack_enemy}")
             input()
@@ -49,37 +49,35 @@ def turn_player(hp_hero: int, hp_enemy: int, potions: int):
             print("You haven't stock")
     
     elif action == "special ability" or action == "3":
-        probability = random.randint(0, 1)
+        if random.random() <= 0.50:
+            damage = generate_damage(30, 50)
+            hp_enemy -= damage
+            print(f"SUCCESS! Special ability dealt {damage} damage.")
 
-        if probability == 1:
-            great_damage = random.randint(30, 50)
-            hp_enemy -= great_damage
-            print("The special ability was successfully executed!")
-            print(f"Damage caused by the great damage: {great_damage}")
-
-            attack_enemy = turn_enemy()
-            hp_hero -= attack_enemy
-            print(f"The enemy has attacked: {attack_enemy}")
-            input()
-
-        
         else:
-            print("The special ability failed")
-            attack_enemy = turn_enemy()
-            hp_hero -= attack_enemy
-            print(f"The enemy has attacked: {attack_enemy}")
-            input()
+            print("FAILED! The special ability did nothing.")
 
-    
     else:
-        print("Invalid option")
-    
+        print("Invalid option. Try again.")
+
+        return turn_player(hp_hero, hp_enemy, potions)
+
     return hp_hero, hp_enemy, potions
 
 #this functions show the turn between player called monster
-def turn_enemy():
-    attack = random.randint(15, 20)
-    return attack
+def turn_enemy(hp_hero, hp_enemy):
+    print("\nENEMY'S TURN ")
+  
+    if hp_enemy < 24:
+        hp_enemy += 15
+        print("The Enemy is scared and heals +15 HP.")
+
+    else:
+        damage = generate_damage(15, 20) 
+        hp_hero -= damage
+        print(f"The Enemy attacks you for {damage} damage.")
+
+    return hp_hero, hp_enemy
 
 #this function  is to prove who's win
 def verify_winner(hp_hero: int, hp_enemy: int):
