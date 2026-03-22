@@ -8,7 +8,7 @@ For this proyect we used 2 two parts the code:
 
 3.Roles en responsabilities
   A.Developer lead ----> Omar Vizcaino -------> Created the game logic, damage system, and winner check.
-  B.Scrum Master------> Kerlys bello-------> Organized the project tasks and technical documentation.
+  B.Scrum Master------> Kerlys Bello-------> Organized the project tasks and technical documentation.
 
 4.Technical Documentation
 Module: 

@@ -7,5 +7,5 @@ hp_enemy = 120
 potions = 3
 
 while functions.verify_winner(hp_hero, hp_enemy):
-    hp_enemy, hp_hero, potions = functions.turn_player(hp_hero, hp_enemy, potions)
+    hp_hero, hp_enemy, potions = functions.turn_player(hp_hero, hp_enemy, potions)
     functions.show_state(hp_hero, hp_enemy)
